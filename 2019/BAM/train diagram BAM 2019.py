@@ -26,6 +26,8 @@ traintimes['376']=list()
 stationcalls['376']=list()
 traintimes['348']=list()
 stationcalls['348']=list()
+traintimes['092']=list()
+stationcalls['092']=list()
 
 traintimes['364']=list()
 stationcalls['364']=list()
@@ -41,6 +43,11 @@ stationcalls['376'].append(0)
 traintimes['348'].append('2018-06-01 03:40')
 stationcalls['348'].append(0)
 
+traintimes['092'].append('2018-06-01 12:56')
+stationcalls['092'].append(0)
+
+
+
 
 
 
@@ -55,6 +62,9 @@ stationcalls['376'].append(1057)
 
 traintimes['348'].append('2018-06-02 04:48')
 stationcalls['348'].append(1057)
+
+traintimes['092'].append('2018-06-02 08:50')
+stationcalls['092'].append(1057)
 
 
 traintimes['097'].append('2018-06-03 18:13')
