@@ -17,12 +17,15 @@ from transliterate import translit, get_available_language_codes
 traintimes=dict()
 stationcalls=dict()
 
+
 traintimes['097']=list()
 stationcalls['097']=list()
 traintimes['087']=list()
 stationcalls['087']=list()
 traintimes['376']=list()
 stationcalls['376']=list()
+traintimes['348']=list()
+stationcalls['348']=list()
 
 traintimes['364']=list()
 stationcalls['364']=list()
@@ -34,6 +37,9 @@ stationcalls['097'].append(0)
 
 traintimes['376'].append('2018-06-01 11:04')
 stationcalls['376'].append(0)
+
+traintimes['348'].append('2018-06-01 03:40')
+stationcalls['348'].append(0)
 
 
 
@@ -47,6 +53,8 @@ stationcalls['097'].append(1057)
 traintimes['376'].append('2018-06-02 07:18')
 stationcalls['376'].append(1057)
 
+traintimes['348'].append('2018-06-02 04:48')
+stationcalls['348'].append(1057)
 
 
 traintimes['097'].append('2018-06-03 18:13')
