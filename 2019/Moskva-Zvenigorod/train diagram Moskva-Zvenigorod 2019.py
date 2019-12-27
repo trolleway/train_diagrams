@@ -147,6 +147,27 @@ stationcalls['6408'].append(43)
 traintimes['6408'].append('2019-12-29 16:43')
 stationcalls['6408'].append(0)
 
+traintimes['6186'].append('2019-12-29 16:40')
+stationcalls['6186'].append(59)
+traintimes['6186'].append('2019-12-29 17:04')
+stationcalls['6186'].append(43)
+traintimes['6186'].append('2019-12-29 18:21')
+stationcalls['6186'].append(0)
+
+traintimes['6410'].append('2019-12-29 17:54')
+stationcalls['6410'].append(59)
+traintimes['6410'].append('2019-12-29 18:18')
+stationcalls['6410'].append(43)
+traintimes['6410'].append('2019-12-29 19:13')
+stationcalls['6410'].append(0)
+
+traintimes['7464'].append('2019-12-29 19:14')
+stationcalls['7464'].append(59)
+traintimes['7464'].append('2019-12-29 19:34')
+stationcalls['7464'].append(43)
+traintimes['7464'].append('2019-12-29 20:23')
+stationcalls['7464'].append(0)
+
 
 stations=dict()
 stations[0]=u"Москва-Смоленская"
