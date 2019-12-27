@@ -119,6 +119,35 @@ traintimes['6144'].append('2019-12-29 11:25')
 stationcalls['6144'].append(0)
 
 
+traintimes['6150'].append('2019-12-29 11:03')
+stationcalls['6150'].append(59)
+traintimes['6150'].append('2019-12-29 11:27')
+stationcalls['6150'].append(43)
+traintimes['6150'].append('2019-12-29 12:31')
+stationcalls['6150'].append(0)
+
+traintimes['6158'].append('2019-12-29 12:24')
+stationcalls['6158'].append(59)
+traintimes['6158'].append('2019-12-29 12:48')
+stationcalls['6158'].append(43)
+traintimes['6158'].append('2019-12-29 14:01')
+stationcalls['6158'].append(0)
+
+traintimes['6164'].append('2019-12-29 13:46')
+stationcalls['6164'].append(59)
+traintimes['6164'].append('2019-12-29 14:09')
+stationcalls['6164'].append(43)
+traintimes['6164'].append('2019-12-29 15:15')
+stationcalls['6164'].append(0)
+
+traintimes['6408'].append('2019-12-29 15:23')
+stationcalls['6408'].append(59)
+traintimes['6408'].append('2019-12-29 15:46')
+stationcalls['6408'].append(43)
+traintimes['6408'].append('2019-12-29 16:43')
+stationcalls['6408'].append(0)
+
+
 stations=dict()
 stations[0]=u"Москва-Смоленская"
 #stations[717]=u'Лена'
