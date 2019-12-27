@@ -17,7 +17,7 @@ from transliterate import translit, get_available_language_codes
 traintimes=dict()
 stationcalls=dict()
 
-trainnumbers=(6405,6103,6111)
+trainnumbers=(6405,6103,6111,6121,6131,6135)
 
 for id in trainnumbers:
 	traintimes[str(id)]=list()
@@ -36,6 +36,34 @@ traintimes['6111'].append('2019-12-29 07:05')
 stationcalls['6111'].append(43)
 traintimes['6111'].append('2019-12-29 07:25')
 stationcalls['6111'].append(59)
+
+traintimes['6121'].append('2019-12-29 07:28')
+stationcalls['6121'].append(0)
+traintimes['6121'].append('2019-12-29 08:32')
+stationcalls['6121'].append(43)
+traintimes['6121'].append('2019-12-29 08:53')
+stationcalls['6121'].append(59)
+
+traintimes['6131'].append('2019-12-29 08:28')
+stationcalls['6131'].append(0)
+traintimes['6131'].append('2019-12-29 09:29')
+stationcalls['6131'].append(43)
+traintimes['6131'].append('2019-12-29 09:49')
+stationcalls['6131'].append(59)
+
+traintimes['6135'].append('2019-12-29 09:18')
+stationcalls['6135'].append(0)
+traintimes['6135'].append('2019-12-29 10:25')
+stationcalls['6135'].append(43)
+traintimes['6135'].append('2019-12-29 10:45')
+stationcalls['6135'].append(59)
+
+traintimes['6401'].append('2019-12-29 10:30')
+stationcalls['6401'].append(0)
+traintimes['6401'].append('2019-12-29 11:34')
+stationcalls['6401'].append(43)
+traintimes['6401'].append('2019-12-29 11:55')
+stationcalls['6401'].append(59)
 
 
 
