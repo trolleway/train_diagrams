@@ -100,6 +100,13 @@ stationcalls['7457'].append(43)
 traintimes['7457'].append('2019-12-29 18:59')
 stationcalls['7457'].append(59)
 
+traintimes['6209'].append('2019-12-29 18:48')
+stationcalls['6209'].append(0)
+traintimes['6209'].append('2019-12-29 19:53')
+stationcalls['6209'].append(43)
+traintimes['6209'].append('2019-12-29 20:14')
+stationcalls['6209'].append(59)
+
 
 
 
@@ -143,6 +150,7 @@ train_line_style='g-'
 hours = mdates.HourLocator(interval=1) 
 hours_fmt = mdates.DateFormatter('%d %H:%M')  
 plt.title(title)
+x_bounds = [datetime.datetime(2019, 12, 29,10,00), datetime.datetime(2019, 12, 29,20)]
 
 #transliterate station names
 #may be replaced to load dataset with official latin names
@@ -172,7 +180,7 @@ new_x = matplotlib.dates.datestr2num('2019-12-29 10:25')
 print('newx=',new_x)
 	
 #ax.set_xlim(left=737422.4340277778)
-ax.set_xlim([datetime.datetime(2019, 12, 29,10,00), datetime.datetime(2019, 12, 29,20)])
+ax.set_xlim(x_bounds)
 
 for trainnumber in traintimes:
     print(trainnumber)
