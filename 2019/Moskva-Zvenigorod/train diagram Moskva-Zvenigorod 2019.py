@@ -108,7 +108,15 @@ traintimes['6209'].append('2019-12-29 20:14')
 stationcalls['6209'].append(59)
 
 
+#-------down trains ---------------
 
+
+traintimes['6144'].append('2019-12-29 10:01')
+stationcalls['6144'].append(59)
+traintimes['6144'].append('2019-12-29 10:24')
+stationcalls['6144'].append(43)
+traintimes['6144'].append('2019-12-29 11:25')
+stationcalls['6144'].append(0)
 
 
 stations=dict()
