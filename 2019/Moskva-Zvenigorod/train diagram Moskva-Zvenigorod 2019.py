@@ -79,6 +79,20 @@ stationcalls['6165'].append(43)
 traintimes['6165'].append('2019-12-29 15:11')
 stationcalls['6165'].append(59)
 
+traintimes['6173'].append('2019-12-29 14:58')
+stationcalls['6173'].append(0)
+traintimes['6173'].append('2019-12-29 15:59')
+stationcalls['6173'].append(43)
+traintimes['6173'].append('2019-12-29 16:20')
+stationcalls['6173'].append(59)
+
+traintimes['6183'].append('2019-12-29 16:18')
+stationcalls['6183'].append(0)
+traintimes['6183'].append('2019-12-29 17:20')
+stationcalls['6183'].append(43)
+traintimes['6183'].append('2019-12-29 17:41')
+stationcalls['6183'].append(59)
+
 
 
 
