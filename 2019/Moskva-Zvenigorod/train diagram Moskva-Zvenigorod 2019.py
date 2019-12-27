@@ -23,30 +23,19 @@ for id in trainnumbers:
 	traintimes[str(id)]=list()
 	stationcalls[str(id)]=list()
 
-traintimes['097']=list()
-stationcalls['097']=list()
-traintimes['087']=list()
-stationcalls['087']=list()
-traintimes['376']=list()
-stationcalls['376']=list()
-traintimes['348']=list()
-stationcalls['348']=list()
-traintimes['092']=list()
-stationcalls['092']=list()
-
-traintimes['364']=list()
-stationcalls['364']=list()
-traintimes['364-2']=list()
-stationcalls['364-2']=list()
-
-
-
 traintimes['6103'].append('2019-12-29 04:41')
 stationcalls['6103'].append(0)
 traintimes['6103'].append('2019-12-29 05:51')
 stationcalls['6103'].append(43)
 traintimes['6103'].append('2019-12-29 06:12')
 stationcalls['6103'].append(59)
+
+traintimes['6111'].append('2019-12-29 06:03')
+stationcalls['6111'].append(0)
+traintimes['6111'].append('2019-12-29 07:05')
+stationcalls['6111'].append(43)
+traintimes['6111'].append('2019-12-29 07:25')
+stationcalls['6111'].append(59)
 
 
 
