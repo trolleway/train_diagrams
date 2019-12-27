@@ -18,7 +18,7 @@ traintimes=dict()
 stationcalls=dict()
 
 trainnumbers=(6405,6103,6111,6121,6131,6135,6401,6155,6165,6173,6183,7457,6209,7461,6403,7463,6231)
-
+trainnumbers = trainnumbers + (6144,6150,6158,6164,6408,6186,6410,7464,6412,6414)
 for id in trainnumbers:
 	traintimes[str(id)]=list()
 	stationcalls[str(id)]=list()
