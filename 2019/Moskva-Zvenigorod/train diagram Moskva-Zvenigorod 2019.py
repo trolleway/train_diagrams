@@ -165,6 +165,15 @@ for elem in sorted(stations.items()) :
 plt.yticks(station_pks)
 ax.set_yticklabels(station_names)
 
+print('left,right')
+left, right = plt.xlim()
+print(left,right)
+new_x = matplotlib.dates.datestr2num('2019-12-29 10:25')	
+print('newx=',new_x)
+	
+#ax.set_xlim(left=737422.4340277778)
+ax.set_xlim([datetime.datetime(2019, 12, 29,10,00), datetime.datetime(2019, 12, 29,20)])
+
 for trainnumber in traintimes:
     print(trainnumber)
     ax.plot(traintimes[trainnumber],stationcalls[trainnumber],train_line_style,label=trainnumber, color = 'gray', antialiased=False)
@@ -174,6 +183,8 @@ for trainnumber in traintimes:
 
     plt.gcf().autofmt_xdate()
     ax.grid(True)
+	
+
 
 
 
