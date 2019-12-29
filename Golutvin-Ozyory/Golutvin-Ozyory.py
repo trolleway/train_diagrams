@@ -70,7 +70,7 @@ time_add = datetime.timedelta(hours=0)
 # numbers can be numeric or string, and converted to string later.
 
 trainnumbers=(6334,6336,6340,6342,6344)
-trainnumbers = trainnumbers + (6144,6150,6158,6164,6408,6186,6410,7464,6412,6414)
+trainnumbers = trainnumbers + (6335,6337,6339,6341,6343)
 for id in trainnumbers:
 	traintimes[str(id)]=list()
 	stationcalls[str(id)]=list()
@@ -229,6 +229,168 @@ stationcalls[trainnumber].append(37)
 traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=77)))
 stationcalls[trainnumber].append(39)
 
+# -------------------
+
+
+trainnumber='6335'
+traintimes[trainnumber].append('2019-12-29 06:15')
+stationcalls[trainnumber].append(39)
+
+
+frist_call_time=dateutil.parser.parse(traintimes[trainnumber][-1])
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=3)))
+stationcalls[trainnumber].append(37)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=16)))
+stationcalls[trainnumber].append(30)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=21)))
+stationcalls[trainnumber].append(26)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=28)))
+stationcalls[trainnumber].append(21)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=36)))
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=41)))
+stationcalls[trainnumber].append(16)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=48)))
+stationcalls[trainnumber].append(12)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=53)))
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=60)))
+stationcalls[trainnumber].append(7)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=65)))
+stationcalls[trainnumber].append(5)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=71)))
+stationcalls[trainnumber].append(2)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=77)))
+stationcalls[trainnumber].append(0)
+
+
+
+trainnumber='6337'
+traintimes[trainnumber].append('2019-12-29 10:40')
+stationcalls[trainnumber].append(39)
+
+
+frist_call_time=dateutil.parser.parse(traintimes[trainnumber][-1])
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=3)))
+stationcalls[trainnumber].append(37)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=16)))
+stationcalls[trainnumber].append(30)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=21)))
+stationcalls[trainnumber].append(26)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=28)))
+stationcalls[trainnumber].append(21)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=36)))
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=41)))
+stationcalls[trainnumber].append(16)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=48)))
+stationcalls[trainnumber].append(12)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=53)))
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=60)))
+stationcalls[trainnumber].append(7)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=65)))
+stationcalls[trainnumber].append(5)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=71)))
+stationcalls[trainnumber].append(2)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=77)))
+stationcalls[trainnumber].append(0)
+
+
+trainnumber='6339'
+traintimes[trainnumber].append('2019-12-29 14:10')
+stationcalls[trainnumber].append(39)
+
+
+frist_call_time=dateutil.parser.parse(traintimes[trainnumber][-1])
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=3)))
+stationcalls[trainnumber].append(37)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=16)))
+stationcalls[trainnumber].append(30)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=21)))
+stationcalls[trainnumber].append(26)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=28)))
+stationcalls[trainnumber].append(21)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=36)))
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=41)))
+stationcalls[trainnumber].append(16)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=48)))
+stationcalls[trainnumber].append(12)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=53)))
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=60)))
+stationcalls[trainnumber].append(7)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=65)))
+stationcalls[trainnumber].append(5)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=71)))
+stationcalls[trainnumber].append(2)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=77)))
+stationcalls[trainnumber].append(0)
+
+
+trainnumber='6341'
+traintimes[trainnumber].append('2019-12-29 18:51')
+stationcalls[trainnumber].append(39)
+
+
+frist_call_time=dateutil.parser.parse(traintimes[trainnumber][-1])
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=3)))
+stationcalls[trainnumber].append(37)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=16)))
+stationcalls[trainnumber].append(30)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=21)))
+stationcalls[trainnumber].append(26)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=28)))
+stationcalls[trainnumber].append(21)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=36)))
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=41)))
+stationcalls[trainnumber].append(16)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=48)))
+stationcalls[trainnumber].append(12)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=53)))
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=60)))
+stationcalls[trainnumber].append(7)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=65)))
+stationcalls[trainnumber].append(5)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=71)))
+stationcalls[trainnumber].append(2)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=77)))
+stationcalls[trainnumber].append(0)
+
+
+trainnumber='6343'
+traintimes[trainnumber].append('2019-12-29 22:37')
+stationcalls[trainnumber].append(39)
+
+
+frist_call_time=dateutil.parser.parse(traintimes[trainnumber][-1])
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=3)))
+stationcalls[trainnumber].append(37)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=16)))
+stationcalls[trainnumber].append(30)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=21)))
+stationcalls[trainnumber].append(26)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=28)))
+stationcalls[trainnumber].append(21)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=36)))
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=41)))
+stationcalls[trainnumber].append(16)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=48)))
+stationcalls[trainnumber].append(12)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=53)))
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=60)))
+stationcalls[trainnumber].append(7)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=65)))
+stationcalls[trainnumber].append(5)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=71)))
+stationcalls[trainnumber].append(2)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=77)))
+stationcalls[trainnumber].append(0)
 
 
 '''
@@ -253,7 +415,7 @@ vertical_hour_ticks_interval=1
 
 horizontal_axis_label_format='%d %H:%M'
 
-x_bounds = [datetime.datetime(2019, 12, 29,4,40), datetime.datetime(2019, 12, 29,21)]
+x_bounds = [datetime.datetime(2019, 12, 29,4,40), datetime.datetime(2019, 12, 29,23,55)]
 
 figsize=(9,9)
 
