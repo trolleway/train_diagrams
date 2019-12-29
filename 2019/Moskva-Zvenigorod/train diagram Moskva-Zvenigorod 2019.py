@@ -23,6 +23,7 @@ for id in trainnumbers:
 	traintimes[str(id)]=list()
 	stationcalls[str(id)]=list()
 
+
 traintimes['6103'].append('2019-12-29 04:41')
 stationcalls['6103'].append(0)
 traintimes['6103'].append('2019-12-29 05:51')
@@ -171,8 +172,10 @@ stationcalls['7464'].append(0)
 
 stations=dict()
 stations[0]=u"Москва-Смоленская"
-#stations[717]=u'Лена'
 stations[43]=u'Голицыно'
+stations[48]=u'Захарово'
+stations[51]=u'Хлюпино'
+stations[55]=u'Скоротово'
 stations[59]=u'Звенигород'
 
 

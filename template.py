@@ -33,7 +33,14 @@ svg_filename = 'template test graph.svg'
 stations=dict()
 stations[0]=u"Москва-Смоленская"
 stations[43]=u'Голицыно'
+stations[48]=u'Захарово'
+stations[51]=u'Хлюпино'
+stations[55]=u'Скоротово'
 stations[59]=u'Звенигород'
+
+# You can get kilometers from OpenStreetMap under open license at 
+#http://brouter.de/brouter-web/#map=10/55.5838/37.2927/standard,HikeBike.HillShading&lonlats=37.581269,55.777273;36.881192,55.700614&profile=rail
+
 
 #transliterate station names
 #may be replaced to load dataset with official latin names
@@ -77,6 +84,20 @@ traintimes['7457'].append('2019-12-29 18:42')
 stationcalls['7457'].append(43)
 traintimes['7457'].append('2019-12-29 18:59')
 stationcalls['7457'].append(59)
+
+# Optionaly set times as delta from prev station
+traintimes['6173'].append('2019-12-29 14:58')
+stationcalls['6173'].append(0)
+traintimes['6173'].append('2019-12-29 15:59')
+stationcalls['6173'].append(43)
+traintimes['6173'].append(str(dateutil.parser.parse(traintimes['6173'][-1])+datetime.timedelta(minutes=4)))
+stationcalls['6173'].append(48)
+traintimes['6173'].append(str(dateutil.parser.parse(traintimes['6173'][-1])+datetime.timedelta(minutes=4)))
+stationcalls['6173'].append(51)
+traintimes['6173'].append(str(dateutil.parser.parse(traintimes['6173'][-1])+datetime.timedelta(minutes=4)))
+stationcalls['6173'].append(55)
+traintimes['6173'].append('2019-12-29 16:20')
+stationcalls['6173'].append(59)
 
 
 #-------down trains ---------------
