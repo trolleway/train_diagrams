@@ -170,4 +170,3 @@ for trainnumber in traintimes:
 #plt.legend(title='Trains:')
 plt.savefig(svg_filename)
 plt.show()
-
