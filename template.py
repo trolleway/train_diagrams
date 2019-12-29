@@ -139,11 +139,9 @@ figsize=(9,9)
 def convert_dates(times_list):
     n = list()
     for i in times_list:
-        #temp_dt = matplotlib.dates.datestr2num(i)
-        temp_dt = datetime.datetime.strptime(i, '%Y-%m-%d %H:%M') + time_add
+        temp_dt = dateutil.parser.parse(str(i)) + time_add
         n.append(temp_dt)
-        print(i)
-        print(temp_dt)
+
 
     return(n)
 
