@@ -152,13 +152,7 @@ for elem in sorted(stations.items()) :
 plt.yticks(station_pks)
 ax.set_yticklabels(station_names)
 
-print('left,right')
-left, right = plt.xlim()
-print(left,right)
-new_x = matplotlib.dates.datestr2num('2019-12-29 10:25')	
-print('newx=',new_x)
-	
-#ax.set_xlim(left=737422.4340277778)
+
 ax.set_xlim(x_bounds)
 
 for trainnumber in traintimes:
