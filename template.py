@@ -19,6 +19,7 @@ import datetime
 # data sample
 traintimes=dict()
 stationcalls=dict()
+annotates=list()
 
 # Type graph label here
 
@@ -86,19 +87,18 @@ traintimes['7457'].append('2019-12-29 18:59')
 stationcalls['7457'].append(59)
 
 # Optionaly set times as delta from prev station
-traintimes['6173'].append('2019-12-29 14:58')
-stationcalls['6173'].append(0)
-traintimes['6173'].append('2019-12-29 15:59')
-stationcalls['6173'].append(43)
-traintimes['6173'].append(str(dateutil.parser.parse(traintimes['6173'][-1])+datetime.timedelta(minutes=4)))
-stationcalls['6173'].append(48)
-traintimes['6173'].append(str(dateutil.parser.parse(traintimes['6173'][-1])+datetime.timedelta(minutes=4)))
-stationcalls['6173'].append(51)
-traintimes['6173'].append(str(dateutil.parser.parse(traintimes['6173'][-1])+datetime.timedelta(minutes=4)))
-stationcalls['6173'].append(55)
-traintimes['6173'].append('2019-12-29 16:20')
-stationcalls['6173'].append(59)
+trainnumber='6401'
+traintimes[trainnumber].append('2019-12-29 17:00')
+stationcalls[trainnumber].append(0)
 
+frist_call_time=dateutil.parser.parse(traintimes[trainnumber][-1])
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=78)))
+stationcalls[trainnumber].append(43)
+traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=88)))
+stationcalls[trainnumber].append(55)
+
+# Optionaly set annotates 
+annotates.append({'datetime':'2019-12-29 17:00','station':0,'text':u'hollidays'})
 
 #-------down trains ---------------
 
@@ -184,7 +184,11 @@ for trainnumber in traintimes:
     plt.gcf().autofmt_xdate()
     ax.grid(True)
 	
-
+#Annotates
+if len(annotates) > 0:
+    for annotate in annotates:
+        ax.annotate(annotate['text'], (mdates.date2num(dateutil.parser.parse(str(annotate['datetime']))), annotate['station']), xytext=(15, 15), 
+            textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))	
     
 #plt.legend(title='Trains:')
 plt.savefig(svg_filename)

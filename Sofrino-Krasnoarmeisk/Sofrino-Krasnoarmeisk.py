@@ -433,7 +433,7 @@ plt.yticks(station_pks)
 ax.set_yticklabels(station_names)
 
 
-ax.set_xlim(x_bounds)
+#ax.set_xlim(x_bounds)
 
 for trainnumber in traintimes:
     print(trainnumber)

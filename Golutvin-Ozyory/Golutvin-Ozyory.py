@@ -19,6 +19,7 @@ import datetime
 # data sample
 traintimes=dict()
 stationcalls=dict()
+annotates=list()
 
 # Type graph label here
 
@@ -167,6 +168,8 @@ traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=72
 stationcalls[trainnumber].append(37)
 traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=77)))
 stationcalls[trainnumber].append(39)
+
+annotates.append({'datetime':'2019-12-29 12:15','station':2,'text':u'hollidays'})
 
 
 trainnumber='6342'
@@ -328,6 +331,8 @@ stationcalls[trainnumber].append(2)
 traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=77)))
 stationcalls[trainnumber].append(0)
 
+annotates.append({'datetime':'2019-12-29 14:10','station':39,'text':u'hollidays'})
+
 
 trainnumber='6341'
 traintimes[trainnumber].append('2019-12-29 18:51')
@@ -468,7 +473,12 @@ for trainnumber in traintimes:
 
     plt.gcf().autofmt_xdate()
     ax.grid(True)
-	
+
+#Annotates
+if len(annotates) > 0:
+    for annotate in annotates:
+        ax.annotate(annotate['text'], (mdates.date2num(dateutil.parser.parse(str(annotate['datetime']))), annotate['station']), xytext=(15, 15), 
+            textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))	
 
     
 #plt.legend(title='Trains:')
