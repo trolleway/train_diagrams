@@ -158,7 +158,7 @@ vertical_hour_ticks_interval=2
 
 horizontal_axis_label_format='%H'
 
-x_bounds = [datetime.datetime(2020, 02, 01,00,00), datetime.datetime(2020, 02, 03,00,00)]
+x_bounds = [datetime.datetime(2020, 02, 01,00,00), datetime.datetime(2020, 02, 02,8,00)]
 
 figsize=(9,9)
 
