@@ -23,21 +23,20 @@ annotates=list()
 
 # Type graph label here
 
-title = u"Звенигородская ветка. График движения поездов на конец 2019\n"
-title = title+"Zvenigorod branch. Train diagram for late 2019"
+title = u"Тында - Нижний Бестях. График движения поездов на 2020\n"
+title = title+"Tynda-Nizniy_Bestyakh. Train diagram for 2020"
 
-svg_filename = 'template test graph.svg'
+svg_filename = 'Tynda-Nizniy_Bestyakh.svg'
 
 # Station names here.
 # Keys can be order numbers, or kilometers.
 
 stations=dict()
-stations[0]=u"Москва-Смоленская"
-stations[43]=u'Голицыно'
-stations[48]=u'Захарово'
-stations[51]=u'Хлюпино'
-stations[55]=u'Скоротово'
-stations[59]=u'Звенигород'
+stations[0]=u"Тында"
+stations[227]=u'Нерюнгри'
+stations[586]=u'Томмот'
+stations[1022]=u'Нижний Бестях'
+
 
 # You can get kilometers from OpenStreetMap under open license at 
 #http://brouter.de/brouter-web/#map=10/55.5838/37.2927/standard,HikeBike.HillShading&lonlats=37.581269,55.777273;36.881192,55.700614&profile=rail
@@ -52,7 +51,7 @@ for id in stations:
 
 
 # Timezones
-# In most cases, you do not need to use timezones, type local time
+# In most cases, you do not need to use timezones, type times in local time
 # If line is so long as Baikal-Amur mainline, 
 # type times in standart time (Moscow), and type timedelta here (Moscow + 6 hours)
 
@@ -62,60 +61,91 @@ time_add = datetime.timedelta(hours=0)
 # Type train numbers or IDs here. 
 # numbers can be numeric or string, and converted to string later.
 
-trainnumbers=(6405,6103,6111,6121,6131,6135,6401,6155,6165,6173,6183,7457,6209,7461,6403,7463,6231)
-trainnumbers = trainnumbers + (6144,6150,6158,6164,6408,6186,6410,7464,6412,6414)
+trainnumbers=(325,687,376,324,328)
+trainnumbers = trainnumbers + (375,325,'687b',6164,6408,6186,6410,7464,6412,6414)
 for id in trainnumbers:
 	traintimes[str(id)]=list()
 	stationcalls[str(id)]=list()
     
 # Type train sheldue for each train
 # Date is optional
+# Local time
 
-trainnumber='6183'
-traintimes[trainnumber].append('2019-12-29 16:18')
+trainnumber='325'
+traintimes[trainnumber].append('2020-02-01 02:00')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2019-12-29 17:20')
-stationcalls[trainnumber].append(43)
-traintimes[trainnumber].append('2019-12-29 17:41')
-stationcalls[trainnumber].append(59)
-
-traintimes['7457'].append('2019-12-29 17:57')
-stationcalls['7457'].append(0)
-traintimes['7457'].append('2019-12-29 18:42')
-stationcalls['7457'].append(43)
-traintimes['7457'].append('2019-12-29 18:59')
-stationcalls['7457'].append(59)
-
-# Optionaly set times as delta from prev station
-trainnumber='6401'
-traintimes[trainnumber].append('2019-12-29 17:00')
-stationcalls[trainnumber].append(0)
-
-frist_call_time=dateutil.parser.parse(traintimes[trainnumber][-1])
-traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=78)))
-stationcalls[trainnumber].append(43)
-traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=88)))
-stationcalls[trainnumber].append(55)
+traintimes[trainnumber].append('2020-02-01 07:26')
+stationcalls[trainnumber].append(227)
 
 # Optionaly set annotates 
-annotates.append({'datetime':'2019-12-29 17:00','station':0,'text':u'hollidays'})
+annotates.append({'datetime':'2020-02-01 02:00','station':0,'text':u'Каждый день\nevery day'})
 
-#-------down trains ---------------
+trainnumber='687'
+traintimes[trainnumber].append('2020-02-01 10:16')
+stationcalls[trainnumber].append(0)
+traintimes[trainnumber].append('2020-02-01 15:16')
+stationcalls[trainnumber].append(227)
+
+annotates.append({'datetime':'2020-02-01 10:16','station':0,'text':u'По дням\nSome days'})
+
+trainnumber='376'
+traintimes[trainnumber].append('2020-02-01 18:10')
+stationcalls[trainnumber].append(0)
+traintimes[trainnumber].append('2020-02-01 23:27')
+stationcalls[trainnumber].append(227)
+
+annotates.append({'datetime':'2020-02-01 18:10','station':0,'text':u'По дням\nSome days'})
+
+#nerungru-tommot
+trainnumber='324'
+traintimes[trainnumber].append('2020-02-01 09:20')
+stationcalls[trainnumber].append(227)
+traintimes[trainnumber].append('2020-02-01 17:25')
+stationcalls[trainnumber].append(586)
+
+annotates.append({'datetime':'2020-02-01 09:20','station':227,'text':u'Каждый день\nevery day'})
 
 
-traintimes['6410'].append('2019-12-29 17:54')
-stationcalls['6410'].append(59)
-traintimes['6410'].append('2019-12-29 18:18')
-stationcalls['6410'].append(43)
-traintimes['6410'].append('2019-12-29 19:13')
-stationcalls['6410'].append(0)
+#tommot-nizniy_bestyakh
+trainnumber='328'
+traintimes[trainnumber].append('2020-02-01 19:00')
+stationcalls[trainnumber].append(586)
+traintimes[trainnumber].append('2020-02-02 05:02')
+stationcalls[trainnumber].append(1022)
 
-traintimes['7464'].append('2019-12-29 19:14')
-stationcalls['7464'].append(59)
-traintimes['7464'].append('2019-12-29 19:34')
-stationcalls['7464'].append(43)
-traintimes['7464'].append('2019-12-29 20:23')
-stationcalls['7464'].append(0)
+annotates.append({'datetime':'2020-02-01 19:00','station':586,'text':u'По дням\nSome days'})
+
+
+
+# down trains
+'''
+
+trainnumber='375'
+traintimes[trainnumber].append('2020-02-01 06:10')
+stationcalls[trainnumber].append(227)
+traintimes[trainnumber].append('2020-02-01 11:26')
+stationcalls[trainnumber].append(0)
+
+# Optionaly set annotates 
+annotates.append({'datetime':'2020-02-01 11:26','station':0,'text':u'odd days'})
+
+trainnumber='687b'
+traintimes[trainnumber].append('2020-02-01 18:01')
+stationcalls[trainnumber].append(227)
+traintimes[trainnumber].append('2020-02-01 23:05')
+stationcalls[trainnumber].append(0)
+
+annotates.append({'datetime':'2020-02-01 23:05','station':0,'text':u'even days'})
+
+trainnumber='325'
+traintimes[trainnumber].append('2020-02-01 19:20')
+stationcalls[trainnumber].append(0)
+traintimes[trainnumber].append('2020-02-02 00:34')
+stationcalls[trainnumber].append(227)
+
+annotates.append({'datetime':'2020-02-01 18:10','station':0,'text':u'every day\n в Хабаровск'})
+'''
+
 
 # end of data
 
@@ -124,11 +154,11 @@ stationcalls['7464'].append(0)
 # Line style, see refrence at https://matplotlib.org/2.0.2/api/lines_api.html
 train_line_style='g-'
 
-vertical_hour_ticks_interval=1
+vertical_hour_ticks_interval=2
 
-horizontal_axis_label_format='%d %H:%M'
+horizontal_axis_label_format='%H'
 
-x_bounds = [datetime.datetime(2019, 12, 29,16,00), datetime.datetime(2019, 12, 29,20)]
+x_bounds = [datetime.datetime(2020, 02, 01,00,00), datetime.datetime(2020, 02, 03,00,00)]
 
 figsize=(9,9)
 
