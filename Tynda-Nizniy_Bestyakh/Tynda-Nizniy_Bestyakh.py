@@ -36,6 +36,7 @@ stations[0]=u"Тында"
 stations[227]=u'Нерюнгри'
 stations[586]=u'Томмот'
 stations[1022]=u'Нижний Бестях'
+stations[1056]=u'Якутск'
 
 
 # You can get kilometers from OpenStreetMap under open license at 
@@ -61,7 +62,7 @@ time_add = datetime.timedelta(hours=0)
 # Type train numbers or IDs here. 
 # numbers can be numeric or string, and converted to string later.
 
-trainnumbers=(325,687,376,324,328)
+trainnumbers=(325,687,376,324,328,'river')
 trainnumbers = trainnumbers + (375,325,'687b',6164,6408,6186,6410,7464,6412,6414)
 for id in trainnumbers:
 	traintimes[str(id)]=list()
@@ -114,6 +115,15 @@ traintimes[trainnumber].append('2020-02-02 05:02')
 stationcalls[trainnumber].append(1022)
 
 annotates.append({'datetime':'2020-02-01 19:00','station':586,'text':u'По дням\nSome days'})
+
+#bus+ship
+trainnumber='river'
+traintimes[trainnumber].append('2020-02-02 05:17')
+stationcalls[trainnumber].append(1022)
+traintimes[trainnumber].append('2020-02-02 07:15')
+stationcalls[trainnumber].append(1056)
+
+annotates.append({'datetime':'2020-02-01 00:15','station':1022,'text':u'Летом - теплоход до речного вокзала, зимой - автобус до 202 квартала\nbus+ship to Yakutsk river terminal, winter - bus to Yakutsk 202 quarter'})
 
 
 
