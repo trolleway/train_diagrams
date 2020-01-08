@@ -70,25 +70,26 @@ for id in trainnumbers:
     
 # Type train sheldue for each train
 # Date is optional
+# Local time
 
 trainnumber='6183'
-traintimes[trainnumber].append('2019-12-29 16:18')
+traintimes[trainnumber].append('2020-06-01 16:18')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2019-12-29 17:20')
+traintimes[trainnumber].append('2020-06-01 17:20')
 stationcalls[trainnumber].append(43)
-traintimes[trainnumber].append('2019-12-29 17:41')
+traintimes[trainnumber].append('2020-06-01 17:41')
 stationcalls[trainnumber].append(59)
 
-traintimes['7457'].append('2019-12-29 17:57')
+traintimes['7457'].append('2020-06-01 17:57')
 stationcalls['7457'].append(0)
-traintimes['7457'].append('2019-12-29 18:42')
+traintimes['7457'].append('2020-06-01 18:42')
 stationcalls['7457'].append(43)
-traintimes['7457'].append('2019-12-29 18:59')
+traintimes['7457'].append('2020-06-01 18:59')
 stationcalls['7457'].append(59)
 
 # Optionaly set times as delta from prev station
 trainnumber='6401'
-traintimes[trainnumber].append('2019-12-29 17:00')
+traintimes[trainnumber].append('2020-06-01 17:00')
 stationcalls[trainnumber].append(0)
 
 frist_call_time=dateutil.parser.parse(traintimes[trainnumber][-1])
@@ -98,23 +99,23 @@ traintimes[trainnumber].append(str(frist_call_time+datetime.timedelta(minutes=88
 stationcalls[trainnumber].append(55)
 
 # Optionaly set annotates 
-annotates.append({'datetime':'2019-12-29 17:00','station':0,'text':u'hollidays'})
+annotates.append({'datetime':'2020-06-01 17:00','station':0,'text':u'hollidays'})
 
 #-------down trains ---------------
 
 
-traintimes['6410'].append('2019-12-29 17:54')
+traintimes['6410'].append('2020-06-01 17:54')
 stationcalls['6410'].append(59)
-traintimes['6410'].append('2019-12-29 18:18')
+traintimes['6410'].append('2020-06-01 18:18')
 stationcalls['6410'].append(43)
-traintimes['6410'].append('2019-12-29 19:13')
+traintimes['6410'].append('2020-06-01 19:13')
 stationcalls['6410'].append(0)
 
-traintimes['7464'].append('2019-12-29 19:14')
+traintimes['7464'].append('2020-06-01 19:14')
 stationcalls['7464'].append(59)
-traintimes['7464'].append('2019-12-29 19:34')
+traintimes['7464'].append('2020-06-01 19:34')
 stationcalls['7464'].append(43)
-traintimes['7464'].append('2019-12-29 20:23')
+traintimes['7464'].append('2020-06-01 20:23')
 stationcalls['7464'].append(0)
 
 # end of data
@@ -128,7 +129,7 @@ vertical_hour_ticks_interval=1
 
 horizontal_axis_label_format='%d %H:%M'
 
-x_bounds = [datetime.datetime(2019, 12, 29,16,00), datetime.datetime(2019, 12, 29,20)]
+x_bounds = [datetime.datetime(2020, 06, 01,07,00), datetime.datetime(2020, 06, 01,20)]
 
 figsize=(9,9)
 
