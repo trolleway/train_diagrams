@@ -32,11 +32,11 @@ svg_filename = 'Tynda-Nizniy_Bestyakh.svg'
 # Keys can be order numbers, or kilometers.
 
 stations=dict()
-stations[0]=u"Тында"
-stations[227]=u'Нерюнгри'
-stations[586]=u'Томмот'
-stations[1022]=u'Нижний Бестях'
-stations[1056]=u'Якутск'
+stations[0]=u"Новокузнецк"
+stations[23]=u'Осинники'
+stations[55]=u'Малиновка'
+stations[108]=u'Апхун (на ветке)'
+stations[198]=u'Таштагол'
 
 
 # You can get kilometers from OpenStreetMap under open license at 
@@ -62,7 +62,7 @@ time_add = datetime.timedelta(hours=0)
 # Type train numbers or IDs here. 
 # numbers can be numeric or string, and converted to string later.
 
-trainnumbers=(325,687,376,324,328,'river')
+trainnumbers=(6042,6044,376,324,328,'river')
 trainnumbers = trainnumbers + (375,325,'687b',6164,6408,6186,6410,7464,6412,6414)
 for id in trainnumbers:
 	traintimes[str(id)]=list()
