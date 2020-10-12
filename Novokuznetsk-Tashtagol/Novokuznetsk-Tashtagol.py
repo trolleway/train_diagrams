@@ -62,8 +62,8 @@ time_add = datetime.timedelta(hours=0)
 # Type train numbers or IDs here. 
 # numbers can be numeric or string, and converted to string later.
 
-trainnumbers=(6042,6044,376,324,328,'river')
-trainnumbers = trainnumbers + (375,325,'687b',6164,6408,6186,6410,7464,6412,6414)
+trainnumbers=(6042,6044,6046,6052,6054,6056,6060)
+
 for id in trainnumbers:
 	traintimes[str(id)]=list()
 	stationcalls[str(id)]=list()
@@ -72,11 +72,11 @@ for id in trainnumbers:
 # Date is optional
 # Local time
 
-trainnumber='325'
-traintimes[trainnumber].append('2020-02-01 02:00')
+trainnumber='6042'
+traintimes[trainnumber].append('2020-10-24 05:11')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2020-02-01 07:26')
-stationcalls[trainnumber].append(227)
+traintimes[trainnumber].append('2020-02-01 05:41')
+stationcalls[trainnumber].append(23)
 
 # Optionaly set annotates 
 annotates.append({'datetime':'2020-02-01 02:00','station':0,'text':u'Каждый день\nevery day'})
