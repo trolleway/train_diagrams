@@ -23,8 +23,8 @@ annotates=list()
 
 # Type graph label here
 
-title = u"Степногорская железная дорога. График движения поездов на 2022 выходные\n"
-title = title+"Stepnogorsk railway. Train diagram for 2022 weekends"
+title = u"Степногорская железная дорога. График движения поездов на 2022 рабочие\n"
+title = title+"Stepnogorsk railway. Train diagram for 2022 weekdays"
 
 svg_filename = 'Stepnogorsk railway.svg'
 
@@ -61,8 +61,8 @@ time_add = datetime.timedelta(hours=0)
 # Type train numbers or IDs here.
 # numbers can be numeric or string, and converted to string later.
 
-trainnumbers=(404,406,'604К',408,610,412)
-trainnumbers = trainnumbers + (405,403,'603К',407,609,411)
+trainnumbers=(402,404,406,'604К',408,602,610,'610weekends',412,608)
+trainnumbers = trainnumbers + (601,405,403,'603К',407,609,411,401,607,409)
 for id in trainnumbers:
 	traintimes[str(id)]=list()
 	stationcalls[str(id)]=list()
@@ -71,118 +71,198 @@ for id in trainnumbers:
 # Date is optional
 # Local time
 
-#weekends
+#weekdays
+
+
+trainnumber='402'
+traintimes[trainnumber].append('2022-07-11 06:35')
+stationcalls[trainnumber].append(0)
+traintimes[trainnumber].append('2022-07-11 06:53')
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 06:54')
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 07:13')
+stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 07:22')
+stationcalls[trainnumber].append(24)
+traintimes[trainnumber].append('2022-07-11 07:32')
+stationcalls[trainnumber].append(24)
+
+trainnumber='602'
+traintimes[trainnumber].append('2022-07-11 06:45')
+stationcalls[trainnumber].append(0)
+traintimes[trainnumber].append('2022-07-11 06:57')
+stationcalls[trainnumber].append(10)
+
 
 trainnumber='404'
-traintimes[trainnumber].append('2022-07-10 07:26')
+traintimes[trainnumber].append('2022-07-11 07:26')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2022-07-10 07:39')
+traintimes[trainnumber].append('2022-07-11 07:39')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 07:58')
+traintimes[trainnumber].append('2022-07-11 07:58')
 stationcalls[trainnumber].append(20)
-traintimes[trainnumber].append('2022-07-10 08:07')
+traintimes[trainnumber].append('2022-07-11 08:07')
+stationcalls[trainnumber].append(24)
+traintimes[trainnumber].append('2022-07-11 09:10')
 stationcalls[trainnumber].append(24)
 
 trainnumber='406'
-traintimes[trainnumber].append('2022-07-10 08:14')
+traintimes[trainnumber].append('2022-07-11 08:14')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2022-07-10 08:35')
+traintimes[trainnumber].append('2022-07-11 08:35')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 08:55')
+traintimes[trainnumber].append('2022-07-11 08:55')
+stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 09:05')
 stationcalls[trainnumber].append(20)
 
-
+'''
 trainnumber='604К'
-traintimes[trainnumber].append('2022-07-10 10:04')
+traintimes[trainnumber].append('2022-07-11 10:04')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2022-07-10 10:22')
+traintimes[trainnumber].append('2022-07-11 10:22')
 stationcalls[trainnumber].append(10)
-annotates.append({'datetime':'2022-07-10 10:22','station':10,'text':u'01.04.22 - 15.09.22'})
-
+annotates.append({'datetime':'2022-07-11 10:22','station':10,'text':u' weekends 01.04.22 - 15.09.22'})
+'''
 
 trainnumber='408'
-traintimes[trainnumber].append('2022-07-10 14:55')
+traintimes[trainnumber].append('2022-07-11 14:55')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2022-07-10 15:14')
+traintimes[trainnumber].append('2022-07-11 15:14')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 15:33')
+traintimes[trainnumber].append('2022-07-11 15:33')
 stationcalls[trainnumber].append(20)
-traintimes[trainnumber].append('2022-07-10 15:42')
+traintimes[trainnumber].append('2022-07-11 15:42')
+stationcalls[trainnumber].append(24)
+traintimes[trainnumber].append('2022-07-11 16:15')
 stationcalls[trainnumber].append(24)
 
 
 trainnumber='610'
-traintimes[trainnumber].append('2022-07-10 18:20')
+traintimes[trainnumber].append('2022-07-11 16:00')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2022-07-10 18:38')
+traintimes[trainnumber].append('2022-07-11 16:13')
 stationcalls[trainnumber].append(10)
-annotates.append({'datetime':'2022-07-10 18:38','station':10,'text':u'01.04.22 - 15.09.22'})
+traintimes[trainnumber].append('2022-07-11 16:41')
+stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 16:50')
+stationcalls[trainnumber].append(24)
+traintimes[trainnumber].append('2022-07-11 17:15')
+stationcalls[trainnumber].append(24)
 
+
+trainnumber='608'
+traintimes[trainnumber].append('2022-07-11 16:04')
+stationcalls[trainnumber].append(0)
+traintimes[trainnumber].append('2022-07-11 16:22')
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 16:32')
+stationcalls[trainnumber].append(10)
+
+
+'''
+trainnumber='610weekends'
+traintimes[trainnumber].append('2022-07-11 18:20')
+stationcalls[trainnumber].append(0)
+traintimes[trainnumber].append('2022-07-11 18:38')
+stationcalls[trainnumber].append(10)
+annotates.append({'datetime':'2022-07-11 18:38','station':10,'text':u'weekends 01.04.22 - 15.09.22'})
+'''
 
 trainnumber='412'
-traintimes[trainnumber].append('2022-07-10 19:40')
+traintimes[trainnumber].append('2022-07-11 19:40')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2022-07-10 20:01')
+traintimes[trainnumber].append('2022-07-11 20:01')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 20:22')
+traintimes[trainnumber].append('2022-07-11 20:22')
 stationcalls[trainnumber].append(20)
-traintimes[trainnumber].append('2022-07-10 20:31')
+traintimes[trainnumber].append('2022-07-11 20:31')
+stationcalls[trainnumber].append(24)
+traintimes[trainnumber].append('2022-07-11 21:10')
 stationcalls[trainnumber].append(24)
 
 
 # down trains
 
+trainnumber='601'
+traintimes[trainnumber].append('2022-07-11 06:57')
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 07:07')
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 07:25')
+stationcalls[trainnumber].append(0)
+
+
+trainnumber='401'
+traintimes[trainnumber].append('2022-07-11 07:32')
+stationcalls[trainnumber].append(24)
+traintimes[trainnumber].append('2022-07-11 07:42')
+stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 08:01')
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 08:13')
+stationcalls[trainnumber].append(0)
+
 
 trainnumber='405'
-traintimes[trainnumber].append('2022-07-10 09:05')
+traintimes[trainnumber].append('2022-07-11 09:05')
 stationcalls[trainnumber].append(20)
-traintimes[trainnumber].append('2022-07-10 09:25')
+traintimes[trainnumber].append('2022-07-11 09:25')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 09:45')
+traintimes[trainnumber].append('2022-07-11 09:45')
 stationcalls[trainnumber].append(0)
 
 trainnumber='403'
-traintimes[trainnumber].append('2022-07-10 09:10')
+traintimes[trainnumber].append('2022-07-11 09:10')
 stationcalls[trainnumber].append(24)
-traintimes[trainnumber].append('2022-07-10 09:20')
+traintimes[trainnumber].append('2022-07-11 09:20')
 stationcalls[trainnumber].append(20)
-traintimes[trainnumber].append('2022-07-10 09:40')
+traintimes[trainnumber].append('2022-07-11 09:40')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 09:58')
+traintimes[trainnumber].append('2022-07-11 09:58')
 stationcalls[trainnumber].append(0)
 
 
-trainnumber='603К'
-traintimes[trainnumber].append('2022-07-10 10:35')
+trainnumber='607'
+traintimes[trainnumber].append('2022-07-11 16:22')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 10:53')
+traintimes[trainnumber].append('2022-07-11 16:32')
+stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 16:50')
 stationcalls[trainnumber].append(0)
 
 
 trainnumber='407'
-traintimes[trainnumber].append('2022-07-10 16:15')
+traintimes[trainnumber].append('2022-07-11 16:15')
 stationcalls[trainnumber].append(24)
-traintimes[trainnumber].append('2022-07-10 16:25')
+traintimes[trainnumber].append('2022-07-11 16:25')
 stationcalls[trainnumber].append(20)
-traintimes[trainnumber].append('2022-07-10 16:44')
+traintimes[trainnumber].append('2022-07-11 16:44')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 17:06')
+traintimes[trainnumber].append('2022-07-11 17:06')
 stationcalls[trainnumber].append(0)
 
-trainnumber='609'
-traintimes[trainnumber].append('2022-07-10 19:05')
+
+trainnumber='409'
+traintimes[trainnumber].append('2022-07-11 17:15')
+stationcalls[trainnumber].append(24)
+traintimes[trainnumber].append('2022-07-11 17:25')
+stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 17:45')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 19:27')
+traintimes[trainnumber].append('2022-07-11 18:03')
 stationcalls[trainnumber].append(0)
+
 
 trainnumber='411'
-traintimes[trainnumber].append('2022-07-10 21:10')
+traintimes[trainnumber].append('2022-07-11 21:10')
 stationcalls[trainnumber].append(24)
-traintimes[trainnumber].append('2022-07-10 21:20')
+traintimes[trainnumber].append('2022-07-11 21:20')
 stationcalls[trainnumber].append(20)
-traintimes[trainnumber].append('2022-07-10 21:41')
+traintimes[trainnumber].append('2022-07-11 21:41')
 stationcalls[trainnumber].append(10)
-traintimes[trainnumber].append('2022-07-10 22:03')
+traintimes[trainnumber].append('2022-07-11 22:03')
 stationcalls[trainnumber].append(0)
 
 
@@ -227,7 +307,7 @@ vertical_hour_ticks_interval=2
 
 horizontal_axis_label_format='%H'
 
-x_bounds = [datetime.datetime(2022, 7, 10,6,0), datetime.datetime(2022, 7, 10,22,0)]
+x_bounds = [datetime.datetime(2022, 7, 11,6,0), datetime.datetime(2022, 7, 11,22,5)]
 
 figsize=(9,9)
 
