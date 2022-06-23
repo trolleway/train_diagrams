@@ -26,7 +26,7 @@ annotates=list()
 title = u"Степногорская железная дорога. График движения поездов на 2022 рабочие\n"
 title = title+"Stepnogorsk railway. Train diagram for 2022 weekdays"
 
-svg_filename = 'Stepnogorsk railway.svg'
+svg_filename = 'Stepnogorsk railway train diagram 2022 weekdays.svg'
 
 # Station names here.
 # Keys can be order numbers, or kilometers.
