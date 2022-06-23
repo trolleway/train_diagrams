@@ -33,8 +33,15 @@ svg_filename = 'Stepnogorsk railway.svg'
 
 stations=dict()
 stations[0]="Степногорск"
+stations[3]="3 км"
+stations[5]="Дачи"
+stations[8]="Пляж"
 stations[10]='СПЗ'
+stations[16]='16 км'
+stations[18]='Промышленная'
+stations[19]='Химзавод'
 stations[20]='ГМЗ'
+stations[23]='Электродепо'
 stations[24]='Заводская'
 
 
@@ -46,7 +53,9 @@ stations[24]='Заводская'
 #may be replaced to load dataset with official latin names
 from transliterate import translit, get_available_language_codes
 for id in stations:
+    if ' км' in stations[id]: continue
     stations[id] = stations[id]+"\n"+translit(stations[id], 'ru',reversed=True)
+    stations[id] = stations[id]+" "+str(id)+' km'
 
 
 
@@ -81,6 +90,8 @@ traintimes[trainnumber].append('2022-07-11 06:53')
 stationcalls[trainnumber].append(10)
 traintimes[trainnumber].append('2022-07-11 06:54')
 stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 07:05')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 07:13')
 stationcalls[trainnumber].append(20)
 traintimes[trainnumber].append('2022-07-11 07:22')
@@ -100,6 +111,10 @@ traintimes[trainnumber].append('2022-07-11 07:26')
 stationcalls[trainnumber].append(0)
 traintimes[trainnumber].append('2022-07-11 07:39')
 stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 07:49')
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append('2022-07-11 07:50')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 07:58')
 stationcalls[trainnumber].append(20)
 traintimes[trainnumber].append('2022-07-11 08:07')
@@ -112,6 +127,8 @@ traintimes[trainnumber].append('2022-07-11 08:14')
 stationcalls[trainnumber].append(0)
 traintimes[trainnumber].append('2022-07-11 08:35')
 stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 08:48')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 08:55')
 stationcalls[trainnumber].append(20)
 traintimes[trainnumber].append('2022-07-11 09:05')
@@ -131,6 +148,8 @@ traintimes[trainnumber].append('2022-07-11 14:55')
 stationcalls[trainnumber].append(0)
 traintimes[trainnumber].append('2022-07-11 15:14')
 stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 15:25')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 15:33')
 stationcalls[trainnumber].append(20)
 traintimes[trainnumber].append('2022-07-11 15:42')
@@ -144,6 +163,10 @@ traintimes[trainnumber].append('2022-07-11 16:00')
 stationcalls[trainnumber].append(0)
 traintimes[trainnumber].append('2022-07-11 16:13')
 stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 16:23')
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append('2022-07-11 16:33')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 16:41')
 stationcalls[trainnumber].append(20)
 traintimes[trainnumber].append('2022-07-11 16:50')
@@ -175,6 +198,8 @@ traintimes[trainnumber].append('2022-07-11 19:40')
 stationcalls[trainnumber].append(0)
 traintimes[trainnumber].append('2022-07-11 20:01')
 stationcalls[trainnumber].append(10)
+traintimes[trainnumber].append('2022-07-11 20:14')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 20:22')
 stationcalls[trainnumber].append(20)
 traintimes[trainnumber].append('2022-07-11 20:31')
@@ -199,6 +224,10 @@ traintimes[trainnumber].append('2022-07-11 07:32')
 stationcalls[trainnumber].append(24)
 traintimes[trainnumber].append('2022-07-11 07:42')
 stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 07:49')
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append('2022-07-11 07:50')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 08:01')
 stationcalls[trainnumber].append(10)
 traintimes[trainnumber].append('2022-07-11 08:13')
@@ -208,6 +237,10 @@ stationcalls[trainnumber].append(0)
 trainnumber='405'
 traintimes[trainnumber].append('2022-07-11 09:05')
 stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 09:12')
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append('2022-07-11 09:13')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 09:25')
 stationcalls[trainnumber].append(10)
 traintimes[trainnumber].append('2022-07-11 09:45')
@@ -218,6 +251,10 @@ traintimes[trainnumber].append('2022-07-11 09:10')
 stationcalls[trainnumber].append(24)
 traintimes[trainnumber].append('2022-07-11 09:20')
 stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 09:27')
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append('2022-07-11 09:28')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 09:40')
 stationcalls[trainnumber].append(10)
 traintimes[trainnumber].append('2022-07-11 09:58')
@@ -238,6 +275,10 @@ traintimes[trainnumber].append('2022-07-11 16:15')
 stationcalls[trainnumber].append(24)
 traintimes[trainnumber].append('2022-07-11 16:25')
 stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 16:32')
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append('2022-07-11 16:33')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 16:44')
 stationcalls[trainnumber].append(10)
 traintimes[trainnumber].append('2022-07-11 17:06')
@@ -249,6 +290,10 @@ traintimes[trainnumber].append('2022-07-11 17:15')
 stationcalls[trainnumber].append(24)
 traintimes[trainnumber].append('2022-07-11 17:25')
 stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 17:32')
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append('2022-07-11 17:34')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 17:45')
 stationcalls[trainnumber].append(10)
 traintimes[trainnumber].append('2022-07-11 18:03')
@@ -260,6 +305,10 @@ traintimes[trainnumber].append('2022-07-11 21:10')
 stationcalls[trainnumber].append(24)
 traintimes[trainnumber].append('2022-07-11 21:20')
 stationcalls[trainnumber].append(20)
+traintimes[trainnumber].append('2022-07-11 21:27')
+stationcalls[trainnumber].append(18)
+traintimes[trainnumber].append('2022-07-11 21:28')
+stationcalls[trainnumber].append(18)
 traintimes[trainnumber].append('2022-07-11 21:41')
 stationcalls[trainnumber].append(10)
 traintimes[trainnumber].append('2022-07-11 22:03')
@@ -303,13 +352,14 @@ annotates.append({'datetime':'2020-02-01 18:10','station':0,'text':u'every day\n
 # Line style, see refrence at https://matplotlib.org/2.0.2/api/lines_api.html
 train_line_style='g-'
 
-vertical_hour_ticks_interval=2
-
+vertical_hour_ticks_interval=1
+train_color = '#b10026'
 horizontal_axis_label_format='%H'
 
+# Time bounds of figure
 x_bounds = [datetime.datetime(2022, 7, 11,6,0), datetime.datetime(2022, 7, 11,22,5)]
-
-figsize=(9,9)
+#Size of figure
+figsize=(19,9)
 
 # END OF STYLING
 
@@ -351,11 +401,12 @@ plt.yticks(station_pks)
 ax.set_yticklabels(station_names)
 
 
+
 ax.set_xlim(x_bounds)
 
 for trainnumber in traintimes:
     print(trainnumber)
-    ax.plot(traintimes[trainnumber],stationcalls[trainnumber],train_line_style,label=trainnumber, color = '#b10026', antialiased=False)
+    ax.plot(traintimes[trainnumber],stationcalls[trainnumber],train_line_style,label=trainnumber, color = train_color, antialiased=False)
     #ax.set_ylabel(r'stations')
     ax.xaxis.set_major_locator(hours)
     ax.xaxis.set_major_formatter(hours_fmt)
@@ -370,5 +421,6 @@ if len(annotates) > 0:
             textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
 
 #plt.legend(title='Trains:')
+plt.tight_layout()
 plt.savefig(svg_filename)
 plt.show()
