@@ -42,6 +42,8 @@ stations[6198]="Чита-2"
 stations[6587]="Чернышевск"
 stations[7306]="Сковородино"
 stations[7807]="Свободный"
+stations[7866]="Белогорск"
+stations[8190]="Облучье"
 stations[8351]="Биробиджан"
 stations[8523]="Хабаровск"
 stations[9177]="Уссурийск"
@@ -133,6 +135,100 @@ traintimes[trainnumber].append('2022-07-14 16:45')
 stationcalls[trainnumber].append(8523) #Хабаровск
 traintimes[trainnumber].append('2022-07-15 06:03')
 stationcalls[trainnumber].append(9289) #Владивосток
+
+
+trainnumber='6830 birobidzan-habarovsk'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+traintimes[trainnumber].append('2022-07-14 07:10')
+stationcalls[trainnumber].append(8351)
+traintimes[trainnumber].append('2022-07-14 09:43')
+stationcalls[trainnumber].append(8523)
+
+trainnumber='6862 obluchie-khabarovsk'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+traintimes[trainnumber].append('2022-07-14 07:10')
+stationcalls[trainnumber].append(8190)
+traintimes[trainnumber].append('2022-07-14 10:08')
+stationcalls[trainnumber].append(8351)
+traintimes[trainnumber].append('2022-07-14 10:16')
+stationcalls[trainnumber].append(8351)
+traintimes[trainnumber].append('2022-07-14 12:31')
+stationcalls[trainnumber].append(8523)
+
+trainnumber='6842 birobidzan-habarovsk'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+traintimes[trainnumber].append('2022-07-14 18:25')
+stationcalls[trainnumber].append(8351)
+traintimes[trainnumber].append('2022-07-14 20:44')
+stationcalls[trainnumber].append(8523)
+
+
+
+
+trainnumber='035'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+annotates.append({'datetime':'2022-07-14 21:31','station':7866,'text':u'from Blagoveshensk'})
+traintimes[trainnumber].append('2022-07-14 21:31')
+stationcalls[trainnumber].append(7866)
+traintimes[trainnumber].append('2022-07-14 22:16')
+stationcalls[trainnumber].append(7866)
+traintimes[trainnumber].append('2022-07-14 05:10')
+stationcalls[trainnumber].append(8190)
+traintimes[trainnumber].append('2022-07-14 07:52')
+stationcalls[trainnumber].append(8351)
+traintimes[trainnumber].append('2022-07-14 07:57')
+stationcalls[trainnumber].append(8351)
+traintimes[trainnumber].append('2022-07-14 10:29')
+stationcalls[trainnumber].append(8523)
+
+
+
+trainnumber='6366 spassk-vvo'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+annotates.append({'datetime':'2022-07-14 21:31','station':9177,'text':u'Spassk-Dalniy - VVO'})
+traintimes[trainnumber].append('2022-07-15 17:56')
+stationcalls[trainnumber].append(9177)
+traintimes[trainnumber].append('2022-07-15 20:19')
+stationcalls[trainnumber].append(9289)
+
+
+
+trainnumber='006'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+traintimes[trainnumber].append('2022-07-14 19:40')
+stationcalls[trainnumber].append(8523)
+traintimes[trainnumber].append('2022-07-15 06:03')
+stationcalls[trainnumber].append(9177)
+traintimes[trainnumber].append('2022-07-15 07:53')
+stationcalls[trainnumber].append(9289)
+
+
+
+trainnumber='352'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+annotates.append({'datetime':'2022-07-14 17:21','station':8523,'text':u'From Sovgavan'})
+traintimes[trainnumber].append('2022-07-14 17:21')
+stationcalls[trainnumber].append(8523)
+traintimes[trainnumber].append('2022-07-14 18:31')
+stationcalls[trainnumber].append(8523)
+traintimes[trainnumber].append('2022-07-15 07:03')
+stationcalls[trainnumber].append(9177)
+traintimes[trainnumber].append('2022-07-15 09:08')
+stationcalls[trainnumber].append(9289)
 
 
 # end of data
