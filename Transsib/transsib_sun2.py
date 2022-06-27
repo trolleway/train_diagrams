@@ -10,7 +10,7 @@ from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,
                                AutoMinorLocator)
 
 import datetime
-
+import astral
 
 
 # Template code for generation of train sheldue diagram

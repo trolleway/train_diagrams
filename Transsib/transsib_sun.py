@@ -11,7 +11,8 @@ from matplotlib.ticker import (MultipleLocator, FormatStrFormatter,
 
 import datetime
 
-
+from astral import LocationInfo
+from astral.sun import sun
 
 # Template code for generation of train sheldue diagram
 # Copy this file, and type in your times
@@ -268,7 +269,7 @@ for k in traintimes:
     temp_dict=convert_dates(traintimes[k])
     traintimes[k] = temp_dict
 
-fig, ax = plt.subplots(figsize=figsize)
+fig, axs = plt.subplots(2,figsize=figsize)
 
 
 # styling
@@ -287,26 +288,46 @@ for elem in sorted(stations.items()) :
 
 
 plt.yticks(station_pks)
-ax.set_yticklabels(station_names)
+axs[0].set_yticklabels(station_names)
 
 
 
-ax.set_xlim(x_bounds)
+axs[0].set_xlim(x_bounds)
 
 for trainnumber in traintimes:
-    ax.plot(traintimes[trainnumber],stationcalls[trainnumber],train_line_style,label=trainnumber, color = train_color, antialiased=False)
+    axs[0].plot(traintimes[trainnumber],stationcalls[trainnumber],train_line_style,label=trainnumber, color = train_color, antialiased=False)
     #ax.set_ylabel(r'stations')
-    ax.xaxis.set_major_locator(hours)
-    ax.xaxis.set_major_formatter(hours_fmt)
+    axs[0].xaxis.set_major_locator(hours)
+    axs[0].xaxis.set_major_formatter(hours_fmt)
 
     plt.gcf().autofmt_xdate()
-    ax.grid(True)
+    axs[0].grid(True)
 
 #Annotates
 if len(annotates) > 0:
     for annotate in annotates:
-        ax.annotate(annotate['text'], (mdates.date2num(dateutil.parser.parse(str(annotate['datetime']))), annotate['station']), xytext=(15, 15),
+        axs[0].annotate(annotate['text'], (mdates.date2num(dateutil.parser.parse(str(annotate['datetime']))), annotate['station']), xytext=(15, 15),
             textcoords='offset points', arrowprops=dict(arrowstyle='-|>'))
+
+
+city = LocationInfo("Khabarovsk", "Russia", "Asia/Vladivostok", 48.5, 134.8)
+sun_data = suncity.observer, date=datetime.date(2022, 7, 14))
+print(sun_data)
+local_datetime = sun_data['sunset'].utc_datetime.replace(tzinfo=pytz.utc)
+
+quit()
+
+tts=(dateutil.parser.parse('2022-07-14 06:25'),dateutil.parser.parse('2022-07-14 12:25'))
+tte=(10,90)
+
+ttd = {dateutil.parser.parse('2022-07-14 06:25'):10, dateutil.parser.parse('2022-07-14 10:25'): 50, dateutil.parser.parse('2022-07-14 12:25'):90}
+plt.bar(*zip(*ttd.items()))
+
+axs[1].plot(*zip(*ttd.items()),train_line_style,label=trainnumber, color = train_color, antialiased=True)
+axs[1].set_ylim=(0,90)
+axs[1].set_xlim(x_bounds)
+axs[1].grid(True)
+
 
 #plt.legend(title='Trains:')
 plt.tight_layout()
