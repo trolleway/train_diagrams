@@ -238,7 +238,7 @@ traintimes[trainnumber].append('2022-08-02 18:30')
 stationcalls[trainnumber].append(40)
 traintimes[trainnumber].append('2022-08-02 19:43')
 stationcalls[trainnumber].append(0)
-annotates.append({'datetime':'2022-08-02 18:30','station':40,'text':'except Sat'})
+annotates.append({'datetime':'2022-08-02 18:40','station':37,'text':'except Sat'})
 
 trainnumber='6015'
 trainnumbers.append(trainnumber)
@@ -248,18 +248,32 @@ traintimes[trainnumber].append('2022-08-02 20:17')
 stationcalls[trainnumber].append(0)
 traintimes[trainnumber].append('2022-08-02 21:29')
 stationcalls[trainnumber].append(40)
-annotates.append({'datetime':'2022-08-02 20:17','station':5,'text':'except sat, mon'})
+annotates.append({'datetime':'2022-08-02 20:22','station':10,'text':'except Sat, Mon, limited train at Su'})
 
 
-trainnumber='6405'
+
+
+
+trainnumber='6011'
 trainnumbers.append(trainnumber)
 traintimes[trainnumber] = list()
 stationcalls[trainnumber] = list()
-traintimes[trainnumber].append('2022-08-02 20:26')
+traintimes[trainnumber].append('2022-08-02 06:32')
 stationcalls[trainnumber].append(0)
-traintimes[trainnumber].append('2022-08-02 21:29')
+traintimes[trainnumber].append('2022-08-02 07:44')
 stationcalls[trainnumber].append(40)
+annotates.append({'datetime':'2022-08-02 06:32','station':3,'text':'Mo-Fr'})
 
+
+trainnumber='6017'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+traintimes[trainnumber].append('2022-08-02 07:25')
+stationcalls[trainnumber].append(0)
+traintimes[trainnumber].append('2022-08-02 08:17')
+stationcalls[trainnumber].append(40)
+annotates.append({'datetime':'2022-08-02 07:25','station':-7,'text':'Mo-Fr'})
 
 
 trainnumber='6407'
@@ -271,6 +285,37 @@ stationcalls[trainnumber].append(0)
 traintimes[trainnumber].append('2022-08-02 22:36')
 stationcalls[trainnumber].append(40)
 annotates.append({'datetime':'2022-08-02 22:36','station':40,'text':'monday'})
+
+
+trainnumber='6009-6010'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+traintimes[trainnumber].append('2022-08-02 07:55')
+stationcalls[trainnumber].append(40)
+traintimes[trainnumber].append('2022-08-02 08:03')
+stationcalls[trainnumber].append(45)
+traintimes[trainnumber].append('2022-08-02 08:13')
+stationcalls[trainnumber].append(45)
+traintimes[trainnumber].append('2022-08-02 08:21')
+stationcalls[trainnumber].append(40)
+annotates.append({'datetime':'2022-08-02 08:10','station':50,'text':'to Dalnee, Mo-Fr'})
+
+
+trainnumber='6023-6024'
+trainnumbers.append(trainnumber)
+traintimes[trainnumber] = list()
+stationcalls[trainnumber] = list()
+traintimes[trainnumber].append('2022-08-02 17:35')
+stationcalls[trainnumber].append(40)
+traintimes[trainnumber].append('2022-08-02 17:43')
+stationcalls[trainnumber].append(45)
+traintimes[trainnumber].append('2022-08-02 17:53')
+stationcalls[trainnumber].append(45)
+traintimes[trainnumber].append('2022-08-02 18:01')
+stationcalls[trainnumber].append(40)
+annotates.append({'datetime':'2022-08-02 17:50','station':50,'text':'to Dalnee, Mo-Fr'})
+
 
 '''
 original_number = trainnumber
